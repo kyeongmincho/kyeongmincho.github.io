@@ -58,18 +58,13 @@
             "position": "Compiler Engineer",
             "url": "https://rebellions.ai/",
             "startDate": "2024-09-03",
-            "endDate": "",
-            "summary": "TODO",
-            "highlights": [
-                "Relativity"
-            ]
+            "endDate": ""
         },
         {
             "name": "Marketit",
-            "position": "Director",
+            "position": "Web App Developer",
             "startDate": "2016-07-28",
-            "endDate": "2017-08-25",
-            "summary": "TODO"
+            "endDate": "2017-08-25"
         }
     ],
     "publications": [
@@ -120,46 +115,16 @@
     ],
     "certificates": [
         {
-            "name": "Machine Learning",
+            "name": "JLPT N1",
             "date": "2018-01-01",
             "issuer": "Stanford University",
             "url": "https://example.com",
-            "icon": "fa-solid fa-location-dot"
+            "icon": "fa-solid fa-certificate"
         },
         {
-            "name": "Quantum Computing",
-            "date": "2018-01-01",
-            "issuer": "Stanford University",
-            "url": "https://example.com",
-            "icon": "fa-solid fa-tag"
-        },
-        {
-            "name": "Quantum Information",
-            "date": "2018-01-01",
-            "issuer": "Stanford University",
-            "url": "https://example.com",
-            "icon": "fa-solid fa-envelope"
-        },
-        {
-            "name": "Quantum Cryptography",
-            "date": "2018-01-01",
-            "issuer": "Stanford University",
-            "url": "https://example.com",
-            "icon": "fa-solid fa-hashtag"
-        },
-        {
-            "name": "Quantum Communication",
-            "date": "2018-01-01",
-            "issuer": "Stanford University",
-            "url": "https://example.com",
-            "icon": "fa-solid fa-calendar"
-        },
-        {
-            "name": "Quantum Teleportation",
-            "date": "2018-01-01",
-            "issuer": "Stanford University",
-            "url": "https://example.com",
-            "icon": "fa-solid fa-clipboard-check"
+            "name": "정보처리기사",
+            "date": "2020-08-28",
+            "issuer": "한국산업인력공단"
         }
     ],
     "skills": [
