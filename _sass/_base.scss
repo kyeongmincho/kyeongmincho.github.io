@@ -37,6 +37,7 @@ table {
 a,
 table.table a {
   color: var(--global-link-color);
+  font-weight: bolder;
 
   &:hover {
     color: var(--global-theme-color);
@@ -287,7 +288,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: bold;
     color: var(--global-theme-color);
 
     &:hover {
