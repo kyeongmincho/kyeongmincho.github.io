@@ -1,0 +1,1 @@
+{%- assign person = site.data.people | where:"id",include.person_id | sample %}{{ person.url }}
