@@ -1,3 +1,8 @@
+- id: kyeongmin.cho
+  name: Kyeongmin Cho
+  korean_name: 조경민
+  url: https://kyeongmincho.com
+
 - id: jeehoon.kang
   name: Jeehoon Kang
   korean_name: 강지훈
@@ -7,3 +12,27 @@
   name: Seungmin Jeon
   korean_name: 전승민
   url: https://cp.kaist.ac.kr/seungmin.jeon
+
+- id: azalea.raad
+  name: Azalea Raad
+  url: https://soundandcomplete.org/
+
+- id: sung-hwan.lee
+  name: Sung-Hwan Lee
+  korean_name: 이성환
+  url: https://sunghwanl.github.io/
+
+- id: janggun.lee
+  name: Janggun Lee
+  korean_name: 이장건
+  url: https://cp.kaist.ac.kr/janggun.lee
+
+- id: changu.kang
+  name: Changu Kang
+  korean_name: 강찬구
+  url: https://www.linkedin.com/in/kangchangu
+
+- id: hakjoo.oh
+  name: Hakjoo Oh
+  korean_name: 오학주
+  url: https://prl.korea.ac.kr/members/hakjoo-oh/

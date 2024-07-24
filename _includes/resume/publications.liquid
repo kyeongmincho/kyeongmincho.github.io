@@ -1,15 +1,37 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign publications = data[1] | sort: 'releaseDate' | reverse %}
-  {% for content in publications %}
+  {% for paper in publications %}
+    <!-- Set authors -->
+    {% assign author_links = "" | split: "" %}
+    {% for author_id in paper.authors %}
+        {% assign author = site.data.people | where:"id",author_id | sample %}
+
+        {% if author %}
+            {% assign name = '' %}
+            {% assign url = '' %}
+            {% if site.full_name == author.name %}
+                {% assign name = "<u>" | append: author.name | append: "</u>" %}
+                {% assign url = '/' %}
+            {% else %}
+                {% assign name = author.name %}
+                {% assign url = author.url %}
+            {% endif %}
+            {% assign link = '<a href="' | append: url | append: '">' | append: name | append: '</a>' %}
+            {% assign author_links = author_links | push: link %}
+        {% endif %}
+    {% endfor %}
+
     <li class="list-group-item">
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
-          {% if content.releaseDate %} {% assign date = content.releaseDate | split: '-' | join: '.' %} {% else %} {% assign date = '' %} {% endif %}
+          {% if paper.releaseDate %} {% assign date = paper.releaseDate | split: '-' | join: '.' %} {% else %} {% assign date = '' %} {% endif %}
           <table class="table-cv">
             <tbody>
               <tr>
                 <td>
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                    {{ paper.acronym }}
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -17,10 +39,21 @@
         </div>
         <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
           <h6 class="title font-weight-bold ml-1 ml-md-4">
-            <a href="{{ content.url }}">{{ content.name }}</a>
+            <a href="{{ paper.url }}">{{ paper.name }}</a>
           </h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.publisher }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+            {{ author_links | join: ", " }}
+          </h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ paper.publisher }}</h6>
+          {% if paper.abstract %}
+            <details class="ml-1 ml-md-4" style="font-size: 0.8rem">
+                <summary>Abstract</summary>
+                {% assign paragraphs = paper.abstract | newline_to_br | strip_newlines | split: '<br />' %}
+                {% for paragraph in paragraphs %}
+                    <p class="ml-1 ml-md-4">{{ paragraph }}</p>
+                {% endfor %}
+            </details>
+          {% endif %}
         </div>
       </div>
     </li>

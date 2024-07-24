@@ -1,5 +1,6 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign work = data[1] | sort: 'startDate' | reverse %}
+  {% assign now = 'now' | date: "%Y-%m-%d" %}
   {% for content in work %}
     <li class="list-group-item">
       <div class="row">
@@ -7,8 +8,12 @@
           {% if content.startDate %}
             {% assign startDate = content.startDate | split: '-' | slice: 0, 2 | join: '.' %}
             {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
-            {% assign date = startDate | append: ' - ' %}
-            {% assign date = date | append: endDate %}
+            {% assign date = startDate %}
+            {% if now < content.startDate %}
+              {% assign date = date | append: ' (expeted)' %}
+            {% else %}
+              {% assign date = date | append: ' - ' | append: endDate %}
+            {% endif %}
           {% else %}
             {% assign date = '' %}
           {% endif %}
