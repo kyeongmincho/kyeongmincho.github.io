@@ -14,8 +14,14 @@
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}
+        {% assign one_month_ago = 'now' | date: "%Y-%m-%d" | date: "%s" | minus: 2592000 | date: "%Y-%m-%d" %}
         {% for item in news limit: news_limit %}
-          <tr>
+          {% assign item_date = item.date | date: "%Y-%m-%d" %}
+          <tr
+            {% if item_date >= one_month_ago %}
+                class="wow tada"
+            {% endif %}
+          >
             <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
             <td>
               {% if item.inline %}

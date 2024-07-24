@@ -1,200 +1,249 @@
 {
-  "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+    "basics": {
+        "name": "Kyeongmin Cho (조경민)",
+        "label": "Software Engineer",
+        "email": "kyeongmin.cho@kaist.ac.kr",
+        "url": "https://kyeongmincho.com",
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "AlbertEinstein",
+                "url": "https://twitter.com/AlbertEinstein"
+            }
+        ]
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
+    "education": [
+        {
+            "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+            "location": "Daejeon, Korea",
+            "url": "https://www.kaist.ac.kr/",
+            "studyType": [
+                {
+                    "degree": "Ph.D.",
+                    "major": "Computer Science"
+                }
+            ],
+            "startDate": "2019-09-02",
+            "endDate": "2024-08-16",
+            "advisor": {
+                "name": "Jeehoon Kang",
+                "url": "https://cp.kaist.ac.kr/jeehoon.kang"
+            },
+            "dissertation": {
+                "title": "Principles of Byte-Addressable Persistency",
+                "url": "https://kyeongmincho.com/assets/pdf/dissertation-screen.pdf"
+            }
+        },
+        {
+            "institution": "Inha University",
+            "location": "Incheon, Korea",
+            "url": "https://www.inha.ac.kr/",
+            "studyType": [
+                {
+                    "degree": "B.S.",
+                    "major": "Computer Science and Engineering"
+                },
+                {
+                    "degree": "B.A.",
+                    "major": "Philosophy (double major)"
+                }
+            ],
+            "startDate": "2013-03-04",
+            "endDate": "2019-08-23"
+        }
+    ],
+    "work": [
+        {
+            "name": "Rebellions Inc.",
+            "position": "NPU Compiler Engineer",
+            "url": "https://rebellions.ai/",
+            "location": "Seongnam, Korea",
+            "startDate": "2024-09-03"
+        },
+        {
+            "name": "Marketit Inc.",
+            "position": "Web App Developer",
+            "url": "https://marketit.asia/",
+            "location": "Seoul, Korea",
+            "startDate": "2016-07-28",
+            "endDate": "2017-08-25"
+        },
+        {
+            "name": "Software Maestro, Ministry of Science and ICT",
+            "position": "Trainee",
+            "url": "https://www.swmaestro.org/sw/main/main.do",
+            "location": "Seoul, Korea",
+            "startDate": "2015-06-22",
+            "endDate": "2016-06-21"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Quantum Probabilistic Model Checking for Time-Bounded Properties",
+            "authors": [
+                "seungmin.jeon",
+                "kyeongmin.cho",
+                "changu.kang",
+                "janggun.lee",
+                "hakjoo.oh",
+                "jeehoon.kang"
+            ],
+            "publisher": "Submitted",
+            "acronym": "-",
+            "releaseDate": "9999-12-31"
+        },
+        {
+            "name": "Memento: A Framework for Detectable Recoverability in Persistent Memory",
+            "authors": [
+                "kyeongmin.cho",
+                "seungmin.jeon",
+                "azalea.raad",
+                "jeehoon.kang"
+            ],
+            "publisher": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+            "acronym": "PLDI 2023",
+            "releaseDate": "2023-06-06",
+            "url": "https://dl.acm.org/doi/10.1145/3591232",
+            "abstract": "Persistent memory (PM) is an emerging class of storage technology that combines the performance of DRAM with the durability of SSD, offering the best of both worlds. This had led to a surge of research on persistent objects in PM. Among such persistent objects, concurrent data structures (DSs) are particularly interesting thanks to their performance and scalability. One of the most widely used correctness criteria for persistent concurrent DSs is <em>detectable recoverability</em>, ensuring both thread safety (for correctness in non-crashing concurrent executions) and crash consistency (for correctness in crashing executions). However, the existing approaches to designing detectably recoverable concurrent DSs are either limited to simple algorithms or suffer from high runtime overheads. <br /> We present Memento: a <em>general</em> and <em>high-performance</em> programming framework for detectably recoverable concurrent DSs in PM. To ensure general applicability to various DSs, Memento supports primitive operations such as checkpoint and compare-and-swap and their composition with control constructs. To ensure high performance, Memento employs a timestamp-based recovery strategy that requires fewer writes and flushes to PM than the existing approaches. We formally prove that Memento ensures detectable recoverability in the presence of crashes. To showcase Memento, we implement a lock-free stack, list, queue, and hash table, and a combining queue that detectably recovers from random crashes in stress tests and performs comparably to existing hand-tuned persistent DSs with and without detectable recoverability."
+        },
+        {
+            "name": "Revamping Hardware Persistency Models: View-Based and Axiomatic Persistency Models for Intel-x86 and Armv8",
+            "authors": [
+                "kyeongmin.cho",
+                "sung-hwan.lee",
+                "azalea.raad",
+                "jeehoon.kang"
+            ],
+            "publisher": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+            "acronym": "PLDI 2021",
+            "releaseDate": "2021-06-18",
+            "url": "https://dl.acm.org/doi/10.1145/3453483.3454027",
+            "abstract": "Non-volatile memory (NVM) is a cutting-edge storage technology that promises the performance of DRAM with the durability of SSD. Recent work has proposed several <em>persistency models</em> for mainstream architectures such as Intel-x86 and Armv8, describing the order in which writes are propagated to NVM. However, these models have several limitations; most notably, they either lack operational models or do not support persistent synchronization patterns. <br /> We close this gap by revamping the existing persistency models. First, inspired by the recent work on promising semantics, we propose a <em>unified operational style</em> for describing persistency using <em>views</em>, and develop view-based operational persistency models for Intel-x86 and Armv8, thus presenting the <em>first</em> operational model for Armv8 persistency. Next, we propose a <em>unified axiomatic style</em> for describing hardware persistency, allowing us to recast and repair the existing axiomatic models of Intel-x86 and Armv8 persistency. We prove that our axiomatic models are equivalent to the authoritative semantics reviewed by Intel and Arm engineers. We further prove that each axiomatic hardware persistency model is equivalent to its operational counterpart. Finally, we develop a persistent model checking algorithm and tool, and use it to verify several representative examples."
+        }
+    ],
+    // "volunteer": [
+    //     {
+    //         "organization": "People's Climate March",
+    //         "location": "Zurich, Switzerland",
+    //         "position": "Lead Organizer",
+    //         "url": "https://example.com",
+    //         "startDate": "2014-04-01",
+    //         "endDate": "2015-07-01",
+    //         "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
+    //         "highlights": [
+    //             "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.",
+    //             "Men of the year 2014 by Time magazine"
+    //         ]
+    //     }
+    // ],
+    "awards": [
+        {
+            "title": "NAVER Ph.D. Fellowship Award",
+            "date": "2021-12-05",
+            "awarder": "NAVER Corp."
+        },
+        {
+            "title": "Best Award (1st place)",
+            "date": "2018-12-27",
+            "awarder": "Computer Science Capstone Design Competition, Inha University",
+            "summary": "Project: A Framework for Fuzzing Android Applications"
+        },
+        {
+            "title": "Bronze Award (14th place)",
+            "date": "2014-11-08",
+            "awarder": "ACM International Collegiate Programming Contest (ICPC) Regional Contest, ACM"
+        },
+        {
+            "title": "Kiwoom Securities Financial Scholarship",
+            "date": "2014-02-21",
+            "awarder": "Kiwoom Securities Corp."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "日本語能力試験 (JLPT) 1級",
+            "date": "2009-08-28",
+            "issuer": "Japan Foundation",
+            "url": "https://www.jlpt.jp/",
+            "icon": "fa-solid fa-certificate"
+        },
+        {
+            "name": "정보처리기사",
+            "date": "2020-08-28",
+            "issuer": "한국산업인력공단",
+            "url": "https://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=1320",
+            "icon": "fa-solid fa-certificate"
+        }
+    ],
+    // "skills": [
+    //     {
+    //         "name": "Physics",
+    //         "level": "Master",
+    //         "icon": "fa-solid fa-hashtag",
+    //         "keywords": [
+    //             "Quantum Mechanics",
+    //             "Quantum Computing",
+    //             "Quantum Information",
+    //             "Quantum Cryptography",
+    //             "Quantum Communication",
+    //             "Quantum Teleportation"
+    //         ]
+    //     }
+    // ],
+    "languages": [
+        {
+            "language": "Korean",
+            "fluency": "Native speaker",
+            "icon": ""
+        },
+        {
+            "language": "English",
+            "fluency": "Professional working proficiency",
+            "icon": ""
+        },
+        {
+            "language": "Japanese",
+            "fluency": "Professional working proficiency",
+            "icon": ""
+        }
     ]
-  },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+    // "interests": [
+    //     {
+    //         "name": "Physics",
+    //         "icon": "fa-solid fa-tag",
+    //         "keywords": [
+    //             "Quantum Mechanics",
+    //             "Quantum Computing",
+    //             "Quantum Information",
+    //             "Quantum Cryptography",
+    //             "Quantum Communication",
+    //             "Quantum Teleportation"
+    //         ]
+    //     }
+    // ],
+    // "references": [
+    //     {
+    //         "name": "Professor John Doe",
+    //         "icon": "fa-solid fa-laptop",
+    //         "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+    //     },
+    //     {
+    //         "name": "Professor John Doe",
+    //         "icon": "fa-solid fa-thumbtack",
+    //         "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+    //     }
+    // ],
+    // "projects": [
+    //     {
+    //         "name": "Quantum Computing",
+    //         "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
+    //         "highlights": [
+    //             "Quantum Teleportation",
+    //             "Quantum Cryptography"
+    //         ],
+    //         "startDate": "2018-01-01",
+    //         "endDate": "2018-01-01",
+    //         "url": "https://example.com"
+    //     }
+    // ]
 }

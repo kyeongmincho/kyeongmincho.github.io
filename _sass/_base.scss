@@ -36,7 +36,8 @@ table {
 
 a,
 table.table a {
-  color: var(--global-theme-color);
+  color: var(--global-link-color);
+  font-weight: bolder;
 
   &:hover {
     color: var(--global-theme-color);
@@ -287,7 +288,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: bold;
     color: var(--global-theme-color);
 
     &:hover {
@@ -373,7 +374,7 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 1.7rem;
 
     a {
       i::before {
@@ -465,6 +466,8 @@ footer.sticky-bottom {
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
+    box-shadow: none;
+    -webkit-box-shadow: none;
 
     .list-group-item {
       background-color: inherit;
@@ -473,6 +476,8 @@ footer.sticky-bottom {
       .badge {
         color: var(--global-card-bg-color) !important;
         background-color: var(--global-theme-color) !important;
+        box-shadow: none;
+        -webkit-box-shadow: none;
       }
     }
   }
