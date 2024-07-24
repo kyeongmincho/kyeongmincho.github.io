@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Candidate
+subtitle: Ph.D. Candidate at KAIST School of Computing
 
 profile:
   align: right
