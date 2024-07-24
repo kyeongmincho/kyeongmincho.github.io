@@ -30,8 +30,7 @@
                 "url": "cp.kaist.ac.kr/jeehoon.kang"
             },
             "dissertation": {
-                "title": "Principles of Byte-Addressable Persistency",
-                "url": "https://example.com"
+                "title": "Principles of Byte-Addressable Persistency"
             }
         },
         {
@@ -55,7 +54,7 @@
     "work": [
         {
             "name": "Rebellions",
-            "position": "Compiler Engineer",
+            "position": "NPU Compiler Engineer",
             "url": "https://rebellions.ai/",
             "startDate": "2024-09-03",
             "endDate": ""

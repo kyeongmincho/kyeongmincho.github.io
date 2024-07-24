@@ -53,7 +53,10 @@
                     </li>
                 <li>
                     <span class="item">
-                        Dissertation: <a href="{{ content.advisor.url }}">{{ content.dissertation.title }}</a>
+                        Dissertation:
+                        <a href="{{ 'dissertation-screen.pdf' | prepend: 'assets/pdf/' | relative_url}}" target="_blank">
+                            {{ content.dissertation.title }}
+                        </a>
                     </span>
                 </li>
                 </ul>
