@@ -3,6 +3,11 @@
   korean_name: 조경민
   url: https://kyeongmincho.com
 
+- id: kaist.cp
+  name: KAIST Concurrency and Parallelism Laboratory
+  korean_name: KAIST 동시성 및 병렬성 연구실
+  url: https://cp.kaist.ac.kr
+
 - id: jeehoon.kang
   name: Jeehoon Kang
   korean_name: 강지훈
