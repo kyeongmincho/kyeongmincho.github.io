@@ -4,12 +4,8 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }} <span style="font-size: 1rem">({{ site.korean_name }})</span>
-      {% else %}
-        {{ site.title }}
-      {% endif %}
+        {{ site.last_name }} <span style="font-size: 1rem; margin-left: .5rem">({{ site.korean_name }})</span>
     </h1>
     <p class="desc small-caps">{{ page.subtitle }}</p>
   </header>
