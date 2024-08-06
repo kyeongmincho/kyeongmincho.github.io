@@ -48,7 +48,7 @@ layout: default
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
+      <h2 id="news">
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
@@ -72,6 +72,14 @@ layout: default
 
     {% if site.newsletter.enabled and site.footer_fixed %}
       {% include scripts/newsletter.liquid center=true %}
+    {% endif %}
+
+    <!-- Google calendar -->
+    {% if page.calendar %}
+        <h2 id="calendar">
+            <a href="#calendar" style="color: inherit">calendar</a>
+        </h2>
+        {% include calendar.liquid %}
     {% endif %}
   </article>
 </div>
