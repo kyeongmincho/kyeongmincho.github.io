@@ -7,7 +7,10 @@ layout: default
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }} <span style="font-size: 1rem; margin-left: .5rem">({{ site.korean_name }})</span>
     </h1>
-    <p class="desc small-caps">{{ page.subtitle }}</p>
+    <p class="desc">
+        <i class="fa-solid fa-envelope"></i> <a href="mailto:{{ site.email }}"><code style="background: transparent">{{ site.email }}</code></a>
+        <a href="cv" style="margin-left: .5rem"><i class="fa-solid fa-file"></i> cv</a>
+    </p>
   </header>
 
   <article>
@@ -30,20 +33,20 @@ layout: default
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
-
-        <!-- Social -->
-        {% if page.social %}
-            <div class="social">
-                <div class="contact-icons">{% include social.liquid %}</div>
-
-                <div class="contact-note">{{ site.contact_note }}</div>
-            </div>
-        {% endif %}
       </div>
     {% endif %}
 
     <div class="clearfix">
         {{ content }}
+
+        <!-- Social -->
+        {% if page.social %}
+        <div class="social">
+            <div class="contact-icons">{% include social.liquid %}</div>
+
+            <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+        {% endif %}
     </div>
 
     <!-- News -->

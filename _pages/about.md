@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Candidate
 
 profile:
   align: right
@@ -17,14 +16,12 @@ calendar: true
 ---
 
 {% assign jeehoon = site.data.people | where:"id","jeehoon.kang" | sample %}
+{% assign cp = site.data.people | where:"id","kaist.cp" | sample %}
 
-I am a Ph.D. candidate at [Concurrency and Parallelism Laboratory](https://cp.kaist.ac.kr), [KAIST School of Computing](https://cs.kaist.ac.kr).
-I am very fortunate to be advised by [Prof. Jeehoon Kang]({{ jeehoon.url }}).
-Prior to KAIST, I received my B.S. in CSE and B.A. in Philosophy from Inha University.
+I will be joining [Rebellions](https://rebellions.ai) as an NPU compiler engineer in September 2024.
 
-My primary research interests lie in the area of concurrency, persistency and programming languages.
-In particular, I am interested in developing and verifying design patterns for coordinating concurrent accesses, and using the design patterns, building practical concurrent systems.
+I received my Ph.D. in Computer Science from [KAIST School of Computing](https://cs.kaist.ac.kr), where I had the privilege of being advised by [Jeehoon Kang]({{ jeehoon.url }}).
+Before that, I completed my undergraduate studies at [Inha University](https://www.inha.ac.kr/).
 
-You can contact me on [{{site.email}}](mailto:{{site.email}}).
-
-You can see my curriculum vitae [here](/cv/).
+For my Ph.D., my research primarily focused on [persistent memory]({{ cp.url }}/pmem) (PM).
+Specifically, I have dedicated my efforts to systematic programming principles to fully harness the potential of PM through formal abstractions, advancing the reliability and performance of PM systems.
