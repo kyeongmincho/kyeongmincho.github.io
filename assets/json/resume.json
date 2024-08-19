@@ -88,9 +88,11 @@
                 "hakjoo.oh",
                 "jeehoon.kang"
             ],
-            "publisher": "Submitted",
-            "acronym": "-",
-            "releaseDate": "9999-12-31"
+            "publisher": "ACM SIGPLAN Conference on Object-oriented Programming, Systems, Languages, and Applications",
+            "acronym": "OOPSLA 2024",
+            "releaseDate": "To appear",
+            "url": "https://2024.splashcon.org/track/splash-2024-oopsla",
+            "abstract": "Probabilistic model checking (PMC) is a verification technique for analyzing the properties of probabilistic systems. However, existing techniques face challenges in verifying large systems with high accuracy. PMC struggles with <em>state explosion</em>, where the number of states grows exponentially with the size of the system, making large system verification infeasible. While statistical model checking (SMC) avoids PMC’s state explosion problem by using a simulation approach, it suffers from <em>runtime explosion</em>, requiring numerous samples for high accuracy. <br /> To address these limitations in verifying large systems with high accuracy, we present <em>quantum probabilistic model checking</em> (QPMC), the first method leveraging quantum computing for PMC with respect to time-bounded properties. QPMC addresses state explosion by encoding PMC problems into quantum circuits that <em>superpose</em> states within qubits. Additionally, QPMC resolves runtime explosion through Quantum Amplitude Estimation, efficiently estimating the probabilities of specified properties. We prove that QPMC correctly solves PMC problems and achieves a quadratic speedup in time complexity compared to SMC."
         },
         {
             "name": "Memento: A Framework for Detectable Recoverability in Persistent Memory",
