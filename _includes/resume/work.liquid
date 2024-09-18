@@ -1,6 +1,9 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% assign work = data[1] | sort: 'startDate' | reverse %}
-  {% assign now = 'now' | date: "%Y-%m-%d" %}
+
+  {% comment %} 빌드 시점의 시간 {% endcomment %}
+  {% assign now = site.time | date: "%Y-%m-%d" %}
+
   {% for content in work %}
     <li class="list-group-item">
       <div class="row">

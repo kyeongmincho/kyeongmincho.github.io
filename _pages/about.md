@@ -18,7 +18,7 @@ calendar: true
 {% assign jeehoon = site.data.people | where:"id","jeehoon.kang" | sample %}
 {% assign cp = site.data.people | where:"id","kaist.cp" | sample %}
 
-I will be joining [Rebellions](https://rebellions.ai) as an NPU compiler engineer in September 2024.
+I am an NPU compiler engineer at [Rebellions](https://rebellions.ai), specializing in optimizing neural processing workloads.
 
 I received my Ph.D. in Computer Science from [KAIST School of Computing](https://cs.kaist.ac.kr), where I had the privilege of being advised by [Jeehoon Kang]({{ jeehoon.url }}).
 Before that, I completed my undergraduate studies at [Inha University](https://www.inha.ac.kr/).
