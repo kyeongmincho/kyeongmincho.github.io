@@ -123,22 +123,12 @@
             "abstract": "Non-volatile memory (NVM) is a cutting-edge storage technology that promises the performance of DRAM with the durability of SSD. Recent work has proposed several <em>persistency models</em> for mainstream architectures such as Intel-x86 and Armv8, describing the order in which writes are propagated to NVM. However, these models have several limitations; most notably, they either lack operational models or do not support persistent synchronization patterns. <br /> We close this gap by revamping the existing persistency models. First, inspired by the recent work on promising semantics, we propose a <em>unified operational style</em> for describing persistency using <em>views</em>, and develop view-based operational persistency models for Intel-x86 and Armv8, thus presenting the <em>first</em> operational model for Armv8 persistency. Next, we propose a <em>unified axiomatic style</em> for describing hardware persistency, allowing us to recast and repair the existing axiomatic models of Intel-x86 and Armv8 persistency. We prove that our axiomatic models are equivalent to the authoritative semantics reviewed by Intel and Arm engineers. We further prove that each axiomatic hardware persistency model is equivalent to its operational counterpart. Finally, we develop a persistent model checking algorithm and tool, and use it to verify several representative examples."
         }
     ],
-    // "volunteer": [
-    //     {
-    //         "organization": "People's Climate March",
-    //         "location": "Zurich, Switzerland",
-    //         "position": "Lead Organizer",
-    //         "url": "https://example.com",
-    //         "startDate": "2014-04-01",
-    //         "endDate": "2015-07-01",
-    //         "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-    //         "highlights": [
-    //             "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.",
-    //             "Men of the year 2014 by Time magazine"
-    //         ]
-    //     }
-    // ],
     "awards": [
+        {
+            "title": "Outstanding Ph.D. Thesis Award",
+            "date": "2025-02-14",
+            "awarder": "KAIST"
+        },
         {
             "title": "NAVER Ph.D. Fellowship Award",
             "date": "2021-12-05",
