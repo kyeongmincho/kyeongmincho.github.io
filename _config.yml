@@ -225,6 +225,7 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - .venv/
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
@@ -637,6 +638,7 @@ jsonresume:
   - work
   - education
   - publications
+  - patents
   - projects
   - volunteer
   - awards

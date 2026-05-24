@@ -123,6 +123,34 @@
             "abstract": "Non-volatile memory (NVM) is a cutting-edge storage technology that promises the performance of DRAM with the durability of SSD. Recent work has proposed several <em>persistency models</em> for mainstream architectures such as Intel-x86 and Armv8, describing the order in which writes are propagated to NVM. However, these models have several limitations; most notably, they either lack operational models or do not support persistent synchronization patterns. <br /> We close this gap by revamping the existing persistency models. First, inspired by the recent work on promising semantics, we propose a <em>unified operational style</em> for describing persistency using <em>views</em>, and develop view-based operational persistency models for Intel-x86 and Armv8, thus presenting the <em>first</em> operational model for Armv8 persistency. Next, we propose a <em>unified axiomatic style</em> for describing hardware persistency, allowing us to recast and repair the existing axiomatic models of Intel-x86 and Armv8 persistency. We prove that our axiomatic models are equivalent to the authoritative semantics reviewed by Intel and Arm engineers. We further prove that each axiomatic hardware persistency model is equivalent to its operational counterpart. Finally, we develop a persistent model checking algorithm and tool, and use it to verify several representative examples."
         }
     ],
+    "patents": [
+        {
+            "name": "System and Method for Providing a Programming Framework for Designing High-Performance Non-Volatile Memory Objects with High Usability",
+            "inventors": [
+                "jeehoon.kang",
+                "kyeongmin.cho",
+                "seungmin.jeon"
+            ],
+            "assignee": "KAIST",
+            "publicationNumber": "KR102899281B1",
+            "doi": "10.8080/1020230092573",
+            "url": "https://doi.org/10.8080/1020230092573"
+        },
+        {
+            "name": "Compiling Method, Electronic Device Performing the Same, and Non-Transitory Computer-Readable Recording Medium",
+            "inventors": [
+                "minhoo.kang",
+                "jaehoon.ryu",
+                "jueon.park",
+                "yeongsang.jang",
+                "kyeongmin.cho"
+            ],
+            "assignee": "Rebellions Inc.",
+            "publicationNumber": "KR102883220B1",
+            "doi": "10.8080/1020250124115",
+            "url": "https://doi.org/10.8080/1020250124115"
+        }
+    ],
     "awards": [
         {
             "title": "Outstanding Ph.D. Thesis Award",

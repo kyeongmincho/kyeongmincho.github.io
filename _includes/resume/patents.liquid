@@ -1,0 +1,53 @@
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for patent in data[1] %}
+    {% assign inventor_links = "" | split: "" %}
+    {% for inventor_id in patent.inventors %}
+      {% assign inventor = site.data.people | where:"id",inventor_id | sample %}
+
+      {% if inventor %}
+        {% if inventor.name == site.full_name %}
+          {% assign name = "<u>" | append: inventor.name | append: "</u>" %}
+          {% assign url = "/" %}
+        {% else %}
+          {% assign name = inventor.name %}
+          {% assign url = inventor.url %}
+        {% endif %}
+
+        {% if url %}
+          {% assign inventor_link = '<a href="' | append: url | append: '">' | append: name | append: '</a>' %}
+        {% else %}
+          {% assign inventor_link = name %}
+        {% endif %}
+      {% else %}
+        {% assign inventor_link = inventor_id %}
+      {% endif %}
+      {% assign inventor_links = inventor_links | push: inventor_link %}
+    {% endfor %}
+
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+          <table class="table-cv">
+            <tbody>
+              <tr>
+                <td>
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                    {{ patent.publicationNumber }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
+          <h6 class="title font-weight-bold ml-1 ml-md-4">
+            <a href="{{ patent.url }}">{{ patent.name }}</a>
+          </h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+            {{ inventor_links | join: ", " }}{% if patent.assignee %} (Assignee: {{ patent.assignee }}){% endif %}
+          </h6>
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
